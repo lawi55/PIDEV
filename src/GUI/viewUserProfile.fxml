@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.viewUserProfileController">
+   <content>
+      <AnchorPane layoutX="500.0" prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: #D3D3D3; -fx-background-radius: 30 px; -fx-border-radius: 30 px;">
+         <children>
+            <VBox fx:id="publist" alignment="CENTER" layoutX="550.0" />
+            <ImageView fx:id="photoPost" fitHeight="150.0" fitWidth="200.0" layoutX="1602.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="photoPath" layoutX="1518.0" layoutY="167.0" text="Label" visible="false" />
+            <Label layoutX="14.0" layoutY="22.0" text="1" visible="false" />
+            <Label fx:id="artistId" layoutX="68.0" layoutY="22.0" />
+            <Pane layoutX="15.0" layoutY="8.0" prefHeight="365.0" prefWidth="344.0" style="-fx-background-color: FFFFFF; -fx-background-radius: 20px;">
+               <children>
+                  <Circle fill="DODGERBLUE" layoutX="158.0" layoutY="100.0" radius="78.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Button layoutX="60.0" layoutY="302.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="223.0" text="Follow" />
+               </children>
+            </Pane>
+            <Label layoutX="105.0" layoutY="202.0" text="Followers">
+               <font>
+                  <Font size="33.0" />
+               </font>
+            </Label>
+            <Label fx:id="followersnumber" layoutX="171.0" layoutY="251.0" text="0">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </content>
+</ScrollPane>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.homePageUserController">
+   <content>
+      <AnchorPane layoutX="500.0" prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: #D3D3D3; -fx-background-radius: 30 px; -fx-border-radius: 30 px;">
+         <children>
+            <HBox layoutX="352.0" layoutY="15.0">
+               <children>
+                  <ImageView fitHeight="67.0" fitWidth="66.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../Images/search.png" />
+                     </image>
+                  </ImageView>
+                  <TextField fx:id="searchBar" onAction="#showSuggestions" prefHeight="74.0" prefWidth="975.0" promptText="Recherchez vos artistes préferes..." style="-fx-background-radius: 20px;">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+            <VBox fx:id="publist" alignment="CENTER" layoutX="550.0" layoutY="250.0" />
+            <ImageView fx:id="photoPost" fitHeight="150.0" fitWidth="200.0" layoutX="1602.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="photoPath" layoutX="1518.0" layoutY="167.0" text="Label" visible="false" />
+            <Label fx:id="artistId" layoutX="68.0" layoutY="22.0" />
+            <VBox fx:id="sugList" layoutX="423.0" layoutY="91.0" prefHeight="70.0" prefWidth="970.0" />
+            <Label fx:id="welcome" layoutX="21.0" layoutY="22.0" text="Welcome, ">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="artiste" layoutX="21.0" layoutY="83.0" text="Label" />
+         </children>
+      </AnchorPane>
+   </content>
+</ScrollPane>

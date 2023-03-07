@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox fx:id="pub_card" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-radius: 15px; -fx-padding: 10px;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.publicationController">
+   <children>
+      <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: #949191; -fx-background-radius: 15px;">
+         <children>
+            <ImageView fx:id="profilepic2" fitHeight="60.0" fitWidth="60.0" layoutX="23.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../Desktop/pic.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="username" layoutX="91.0" layoutY="19.0" text="Louay Sejine">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <Label fx:id="time" layoutX="97.0" layoutY="54.0" text="1h">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="imagepub" fitHeight="308.0" fitWidth="676.0" layoutX="9.0" layoutY="132.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../../../../../Desktop/pic.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="descriptionpub" layoutX="29.0" layoutY="87.0" text="Welcome to my profile!">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <Button fx:id="dislike" layoutX="17.0" layoutY="490.0" mnemonicParsing="false" onAction="#removeLikes" prefHeight="59.0" prefWidth="86.0" style="-fx-background-radius: 20px;" text="Je n'aime plus" />
+            <Button fx:id="comment" layoutX="281.0" layoutY="490.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="116.0" style="-fx-background-radius: 20px;" text="Commentaire" />
+            <Button fx:id="save" layoutX="576.0" layoutY="490.0" mnemonicParsing="false" onAction="#savePost" prefHeight="59.0" prefWidth="116.0" style="-fx-background-radius: 20px;" text="Sauvegarder" />
+            <Button fx:id="like" layoutX="16.0" layoutY="490.0" mnemonicParsing="false" onAction="#addLikes" prefHeight="59.0" prefWidth="86.0" style="-fx-background-radius: 20px;" text="J'aime" />
+            <Label fx:id="likes" layoutX="53.0" layoutY="467.0" text="0" />
+            <Label fx:id="commentCount" layoutX="325.0" layoutY="467.0" text="0" />
+            <Label fx:id="saveCount" layoutX="628.0" layoutY="467.0" text="0" />
+            <Label fx:id="id_post" layoutX="281.0" layoutY="41.0" visible="false" />
+            <VBox fx:id="commentList" layoutX="26.0" layoutY="630.0" />
+            <TextArea fx:id="newComment" layoutX="66.0" layoutY="569.0" onKeyPressed="#postComment" prefHeight="39.0" prefWidth="618.0" promptText="Ecrire un commentaire..." style="radi: 20px;" />
+            <ImageView fitHeight="39.0" fitWidth="44.0" layoutX="14.0" layoutY="569.0" pickOnBounds="true" preserveRatio="true" />
+            <MenuButton layoutX="640.0" layoutY="37.0" mnemonicParsing="false">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#update" text="Modifier" />
+                <MenuItem mnemonicParsing="false" onAction="#delete" text="Supprimer" />
+              </items>
+            </MenuButton>
+         </children>
+      </Pane>
+   </children>
+</HBox>
